@@ -1,0 +1,22 @@
+print ("Hola Mundo soy Nombre")
+print ("Hola Mundo soy Gerardo")
+#print("Hola Mundo soy Gerado")
+
+print("Hola Mundo")
+print("soy Gerardo")
+
+print("Hola Mundo",end="")
+print("soy Gerardo",end="")
+#print muestra el mensaje tal y como se escribe con el salto de linea, mientras qye print, end=""
+
+texto= input()
+print(texto+ "hola")
+
+print ("Ingrese su nombre")
+Nombre=input()
+
+print("Hola Mundo")
+print("soy "+ Nombre)
+
+print ("Hola mundo",end="")
+print("soy"+Nombre,end="")
