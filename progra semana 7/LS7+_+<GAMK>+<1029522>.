@@ -1,0 +1,78 @@
+# Mensaje inicial
+print("Ejercicio 1: Operaciones Aritméticas")
+
+# Pedir al usuario que ingrese dos números y convertirlos a float
+numero1 = float(input("Ingrese el primer número: "))
+numero2 = float(input("Ingrese el segundo número: "))
+
+# Realizar las operaciones
+suma = numero1 + numero2
+resta = numero1 - numero2
+multiplicacion = numero1 * numero2
+division = numero1 / numero2
+modulo = numero1 % numero2
+exponenciacion = numero1 ** numero2
+cociente = numero1 // numero2
+
+# Mostrar los resultados
+print(f"{numero1} + {numero2} = {suma}")
+print(f"{numero1} - {numero2} = {resta}")
+print(f"{numero1} * {numero2} = {multiplicacion}")
+print(f"{numero1} / {numero2} = {division}")
+print(f"{numero1} % {numero2} = {modulo}")
+print(f"{numero1} ** {numero2} = {exponenciacion}")
+print(f"{numero1} // {numero2} = {cociente}")
+
+while True:
+    print("Ejercicio 1: Operaciones Aritméticas")
+    print("1. Suma")
+    print("2. Resta")
+    print("3. Multiplicación")
+    print("4. División")
+    print("5. Módulo")
+    print("6. Exponenciación")
+    print("7. Cociente")
+    print("8. Salir")
+
+    opcion = input("Elija una operación (1-8): ")
+
+    if opcion == '8':
+        print("¡Hasta luego!")
+        break  # Salir del bucle si el usuario elige la opción 8 (Salir)
+    
+    numero1 = float(input("Ingrese el primer número: "))
+    numero2 = float(input("Ingrese el segundo número: "))
+
+    if opcion == '1':
+        resultado = numero1 + numero2
+        operacion = "+"
+    elif opcion == '2':
+        resultado = numero1 - numero2
+        operacion = "-"
+    elif opcion == '3':
+        resultado = numero1 * numero2
+        operacion = "*"
+    elif opcion == '4':
+        if numero2 == 0:
+            print("Error: No se puede dividir por cero.")
+            continue  # Volver al inicio del bucle
+        resultado = numero1 / numero2
+        operacion = "/"
+    elif opcion == '5':
+        resultado = numero1 % numero2
+        operacion = "%"
+    elif opcion == '6':
+        resultado = numero1 ** numero2
+        operacion = "**"
+    elif opcion == '7':
+        if numero2 == 0:
+            print("Error: No se puede calcular el cociente con el divisor igual a cero.")
+            continue  # Volver al inicio del bucle
+        resultado = numero1 // numero2
+        operacion = "//"
+    else:
+        print("Opción no válida. Por favor, elija una opción válida (1-8).")
+        continue  # Volver al inicio del bucle
+
+    print(f"{numero1} {operacion} {numero2} = {resultado}")
+
