@@ -1,0 +1,33 @@
+print("Ejercicio 2")
+
+
+
+numero_dia = int(input("Ingrese un número de día (1-lunes, 2-martes, 3-miércoles, 4-jueves, 5-viernes, 6-sábado, 7-domingo): "))
+
+
+
+if numero_dia >= 1 and numero_dia <= 7:
+ 
+
+    if numero_dia == 1:
+        dia = "lunes"
+    elif numero_dia == 2:
+        dia = "martes"
+    elif numero_dia == 3:
+        dia = "miércoles"
+    elif numero_dia == 4:
+        dia = "jueves"
+    elif numero_dia == 5:
+        dia = "viernes"
+    elif numero_dia == 6:
+        dia = "sábado"
+    else:
+        dia = "domingo"
+    
+
+
+    print(f"El número {numero_dia} corresponde a {dia}.")
+else:
+
+
+    print("Error. El número a ingresar debe estar contenido entre 1 y 7.")
