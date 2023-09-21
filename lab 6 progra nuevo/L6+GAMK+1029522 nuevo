@@ -1,0 +1,20 @@
+# 1.1 Mostrar el texto "Ejercicio 1"
+print("Ejercicio 1")
+
+# 1.2 Solicitar al usuario que ingrese el número entero
+try:
+    numero = int(input("Número ENTERO: "))
+except ValueError:
+    print("Error: Ingrese un número entero válido.")
+    exit()
+
+# 1.4 Determinar si el número es positivo, negativo o cero
+if numero > 0:
+    resultado = "positivo"
+elif numero < 0:
+    resultado = "negativo"
+else:
+    resultado = "cero"
+
+# 1.5 Mostrar el resultado
+print("RESULTADO:", resultado)
