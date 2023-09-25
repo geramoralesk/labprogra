@@ -1,0 +1,60 @@
+# a. Mostrar el mensaje "Ejercicio 3: Jerarquía de operaciones"
+print("Ejercicio 3: Jerarquía de operaciones")
+
+# b. Permitir al usuario ingresar tres números (a, b y c)
+a = float(input("Ingrese el valor de a: "))
+b = float(input("Ingrese el valor de b: "))
+c = float(input("Ingrese el valor de c: "))
+
+# b. Mostrar el resultado de las expresiones
+resultado_1 = a * b + c
+resultado_2 = a * (b + c)
+resultado_3 = a / b * c
+resultado_4 = 3 * a + 2 * b / (c ** 2)
+
+# Imprimir los resultados
+print("Resultado de a*b+c:", resultado_1)
+print("Resultado de a*(b+c):", resultado_2)
+print("Resultado de a/b*c:", resultado_3)
+print("Resultado de 3a+2b/c^2:", resultado_4)
+
+import math
+
+def calcular_formula_cuadratica(a, b, c):
+    discriminante = b ** 2 - 4 * a * c
+    if discriminante < 0:
+        return "Error: Discriminante negativo, no hay soluciones reales."
+    else:
+        x1 = (-b + math.sqrt(discriminante)) / (2 * a)
+        x2 = (-b - math.sqrt(discriminante)) / (2 * a)
+        return (x1, x2)
+
+while True:
+    print("Ejercicio 3: Jerarquía de operaciones")
+    print("1. Calcular a*b+c")
+    print("2. Calcular a*(b+c)")
+    print("3. Calcular a/b*c")
+    print("4. Calcular la raíz cuadrada usando la fórmula cuadrática")
+    print("5. Salir")
+    
+    opcion = input("Seleccione una opción (1/2/3/4/5): ")
+
+    if opcion == '1':
+        resultado = a * b + c
+    elif opcion == '2':
+        resultado = a * (b + c)
+    elif opcion == '3':
+        resultado = a / b * c
+    elif opcion == '4':
+        a = float(input("Ingrese el valor de a: "))
+        b = float(input("Ingrese el valor de b: "))
+        c = float(input("Ingrese el valor de c: "))
+        resultados_cuadraticos = calcular_formula_cuadratica(a, b, c)
+        resultado = resultados_cuadraticos if isinstance(resultados_cuadraticos, str) else f"Soluciones: x1={resultados_cuadraticos[0]}, x2={resultados_cuadraticos[1]}"
+    elif opcion == '5':
+        break
+    else:
+        print("Opción no válida. Por favor, seleccione una opción válida.")
+        continue
+
+    print("Resultado:", resultado)
