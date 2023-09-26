@@ -1,0 +1,43 @@
+def factorial(numero):
+    if numero == 0:
+        return 1
+    else:
+        return numero * factorial(numero - 1)
+
+def fibonacci(n):
+    if n <= 0:
+        return []
+    elif n == 1:
+        return [0]
+    elif n == 2:
+        return [0, 1]
+    else:
+        fib = [0, 1]
+        while len(fib) < n:
+            fib.append(fib[-1] + fib[-2])
+        return fib
+
+while True:
+    print("Menú:")
+    print("1. Factorial")
+    print("2. Secuencia de Fibonacci")
+    print("3. Salir")
+    
+    opcion = input("Ingrese el número de opción que desea ejecutar: ")
+
+    if opcion == "1":
+        numero = int(input("Ingrese un número: "))
+        resultado = factorial(numero)
+        print(f"{numero} = {numero}! =", " * ".join(map(str, range(numero, 0, -1))), "=", resultado)
+    elif opcion == "2":
+        numero = int(input("Ingrese un número para generar la secuencia de Fibonacci: "))
+        fib_sequence = fibonacci(numero)
+        if fib_sequence:
+            print("Fibonacci(", numero, ") =", ", ".join(map(str, fib_sequence)))
+        else:
+            print("El número debe ser mayor que 0 para generar la secuencia de Fibonacci.")
+    elif opcion == "3":
+        print("¡Hasta luego!")
+        break
+    else:
+        print("Opción no válida. Por favor, elija una opción del menú.")
